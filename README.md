@@ -4,7 +4,7 @@
 
 1. Склонируйте репозиторий:
    ```bash
-   git clone
+   git clone https://github.com/sumrak10/lesta-games-tesk-task
    ```
 2. Перейдите в директорию проекта:
    ```bash

@@ -1,0 +1,18 @@
+services:
+  backend:
+    build:
+      context: .
+    container_name: backend
+    hostname: backend
+    env_file:
+      - example.env
+
+  reverse-proxy:
+    image: nginx:latest
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./www/:/usr/share/nginx/html/:ro
+    depends_on:
+      - backend
